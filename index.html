@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbarians Rugby Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --azul: #003366; --amarillo: #FFD700; }
+        .bg-azul { background-color: var(--azul); }
+        .text-azul { color: var(--azul); }
+        .bg-amarillo { background-color: var(--amarillo); }
+        .border-amarillo { border-color: var(--amarillo); }
+        .drop-zone { border: 2px dashed #ccc; transition: 0.3s; }
+        .drop-zone--over { border-color: var(--azul); background: #f0f4f8; }
+        html { scroll-behavior: smooth; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900">
+<!--CABECERA AZUL DE LA PÁGINA-->
+    <nav class="bg-azul text-white sticky top-0 z-50 shadow-lg h-20">
+        <div class="container mx-auto px-6 py-2 h-full flex justify-between items-center relative">
+            <div class="flex items-center">
+                <div class="absolute top w-[120px] h-[120px]  flex items-center justify-center overflow-hidden">
+                    <img src="IMAGES/LOGO_BARBARIANS.png" alt="Logo BRC" class="max-w-full max-h-full object-contain">
+                </div>
+                <span class="text-xl font-black tracking-tighter ml-24 uppercase italic">Barbarians <span class="text-amarillo">RC</span></span>
+            </div>
+<!--CABECERA DE NAVEGACIÓN ENTRE APARTADOS-->
+            <div class="hidden md:flex space-x-8 font-bold uppercase text-sm">
+                <a href="#inicio" class="hover:text-amarillo">Inicio</a>
+                <a href="#eventos" class="hover:text-amarillo">Calendario</a>
+                <a href="#inscripcion" class="hover:text-amarillo">Inscripción</a>
+                <a href="#tienda" class="hover:text-amarillo">Tienda</a>
+                <a href="#contacto" class="hover:text-amarillo">Contacto</a>
+            </div>
+        </div>
+    </nav>
+<!--FOTO DE TODO EL CLUB-->
+<header id="inicio" class="relative min-h-[95vh] flex flex-col justify-between text-center text-white pt-24 pb-12 overflow-hidden">
+    
+    <div class="absolute inset-0 z-10">
+        <img src="IMAGES/FotoCabecera.png" alt="Dénia Barbarians Rugby Club" 
+            class="w-full h-full object-cover object-center transition-transform duration-1000">
+        
+        <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-black/90 via-black/50 to-transparent"></div>
+        
+        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
+    </div>
+
+    <div class="relative z-20 px-6 max-w-7xl mx-auto animate-fade-in">
+        
+        <div class="inline-block bg-white/10 backdrop-blur-sm border border-white/20 text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 italic">
+            Costa Blanca Rugby Marina Alta
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-black italic uppercase leading-none tracking-tighter"
+            style="text-shadow: 0 4px 20px rgba(0,0,0,0.9);">
+            Más que un Club,<br> <span class="text-amarillo">Una Familia</span>
+        </h1>
+        
+        </div>
+
+    <div class="relative z-20 px-6 animate-fade-in mt-auto">
+        <a href="#inscripcion" class="bg-amarillo text-azul px-14 py-5 rounded-full font-black uppercase shadow-2xl hover:bg-white hover:text-azul hover:scale-105 transition-all inline-block text-lg md:text-xl transform hover:-translate-y-1">
+            ¡Inscríbete Ahora!
+        </a>
+    </div>
+</header>
+<!--CONÓNCENOS-->
+<section id="historia" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            
+            <div class="w-full md:w-1/2 relative">
+                <div class="absolute -top-4 -left-4 w-24 h-24 bg-amarillo/20 rounded-full z-0"></div>
+                <img src="IMAGES/InicioEscuela.jpg" alt="Inicios Barbarians" 
+                    class="relative z-10 rounded-2xl shadow-2xl w-full h-[400px] object-cover">
+                <div class="absolute -bottom-6 -right-6 bg-azul text-white p-6 rounded-xl shadow-xl hidden md:block z-20">
+                    <p class="text-3xl font-black italic uppercase tracking-tighter">Est. 2003</p>
+                    <p class="text-xs uppercase opacity-70">Fundación de la escuela</p>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2">
+                <h2 class="text-azul text-sm font-bold uppercase tracking-[0.3em] mb-4">Nuestros Valores</h2>
+                <h3 class="text-4xl md:text-5xl font-black italic uppercase text-gray-900 mb-6 leading-none">
+                    Forjando el Rugby en la <span class="text-azul">Marina Alta</span>
+                </h3>
+                
+                <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+                    <p>
+                        Todo empezó con un balón y un grupo de amigos apasionados por los valores de este deporte. Lo que nació como un sueño en las playas de Dénia, se ha convertido hoy en los <strong>Barbarians Marina Alta</strong>.
+                    </p>
+                    <p>
+                        No solo enseñamos a jugar al rugby; construimos comunidad. Desde nuestras categorías inferiores hasta el equipo senior, cada entrenamiento es una lección de respeto, disciplina y, sobre todo, compañerismo.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 mt-10 border-t border-gray-100 pt-8">
+                    <div>
+                        <p class="text-3xl font-black text-azul italic">+35</p>
+                        <p class="text-sm text-gray-500 uppercase font-bold">años</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-azul italic">100%</p>
+                        <p class="text-sm text-gray-500 uppercase font-bold">Compromiso</p>
+                    </div>
+                </div>
+            </div>
+        </div> </div> </section> <section id="eventos" class="py-16 bg-white border-t border-gray-100">
+</section>
+<!--CALENDARIO DE GOOGLE-->
+    <section id="eventos" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-black text-azul mb-10 italic text-center uppercase">
+    <span class="border-b-4 border-amarillo pb-2">Próximos Eventos</span>
+</h2>
+            <div class="rounded-xl overflow-hidden shadow-2xl border-4 border-azul h-[600px]">
+                <iframe src="https://calendar.google.com/calendar/embed?src=deniarugbyclub1991%40gmail.com&ctz=Europe%2FMadrid" style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
+<!--FORMULARIO DE INSCRIPCIÓN DE LOS JUGADORES-->
+    <section id="inscripcion" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-t-8 border-azul">
+                <h2 class="text-4xl font-black text-azul mb-10 italic text-center underline decoration-amarillo">FICHA DE INSCRIPCIÓN</h2>
+                
+                <form id="rugbyForm" class="space-y-8">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div><label class="block font-bold mb-2 text-azul">Nombre *</label><input type="text" name="nombre" required class="w-full p-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-azul outline-none"></div>
+                        <div><label class="block font-bold mb-2 text-azul">Primer Apellido *</label><input type="text" name="apellido1" required class="w-full p-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-azul outline-none"></div>
+                        <div><label class="block font-bold mb-2 text-azul">Segundo Apellido</label><input type="text" name="apellido2" class="w-full p-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-azul outline-none"></div>
+                        <div><label class="block font-bold mb-2 text-azul">Fecha de nacimiento *</label><input type="date" name="fechaNacimiento" required class="w-full p-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-azul outline-none"></div>
+                        <div><label class="block font-bold mb-2 text-azul">Teléfono de contacto *</label><input type="text" name="telefono" required class="w-full p-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-azul outline-none"></div>
+                        <div class="md:col-span-2"><label class="block font-bold mb-2 text-azul">Dirección *</label><input type="text" name="direccion" required class="w-full p-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-azul outline-none"></div>
+                        <div class="md:col-span-2"><label class="block font-bold mb-2 text-azul">Email *</label><input type="email" name="email" required class="w-full p-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-azul outline-none"></div>
+                    </div>
+<!--INTRODUCCIÓN DE IMÁGENES EN EL FORMULARIO-->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block font-bold mb-2 text-azul"><i class="fas fa-camera mr-2"></i>Foto de/de la jugador/a *</label>
+                            <div class="drop-zone h-32 flex items-center justify-center rounded-lg cursor-pointer hover:bg-gray-50 border-2 border-dashed border-gray-300" id="dropZoneFoto">
+                                <span class="text-gray-400 font-medium">Arrastra aquí o haz click</span>
+                                <input type="file" name="inputFoto" id="inputFoto" class="hidden" accept="image/*">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-bold mb-2 text-azul"><i class="fas fa-id-card mr-2"></i>Documentación jugador/a (DNI) *</label>
+                            <div class="drop-zone h-32 flex items-center justify-center rounded-lg cursor-pointer hover:bg-gray-50 border-2 border-dashed border-gray-300" id="dropZoneJugador">
+                                <span class="text-gray-400 font-medium">Anverso y reverso</span>
+                                <input type="file" name="DNI_Jugador" id="inputDocumentoJugador" class="hidden" accept="image/*,application/pdf">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-bold mb-2 text-azul"><i class="fas fa-users-cog mr-2"></i>DNI Padre/Madre/Tutor (Menores 18)</label>
+                            <div class="drop-zone h-32 flex items-center justify-center rounded-lg cursor-pointer hover:bg-gray-50 border-2 border-dashed border-gray-300" id="dropZonePaterno">
+                                <span class="text-gray-400 font-medium">Opcional para adultos</span>
+                                <input type="file" name="DNI_Tutor" id="inputDocumentoPaterno" class="hidden" accept="image/*,application/pdf">
+                            </div>
+                        </div>
+                    </div>
+<!--DECLARACIÓN DE RESPONSABILIDAD Y PROTECCIÓN DE DATOS-->
+                    <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
+                        <div class="flex items-start">
+                            <input id="privacidad" name="privacidad" type="checkbox" required class="w-5 h-5 text-azul border-gray-300 rounded focus:ring-azul mt-1 cursor-pointer">
+                            <div class="ml-4 text-sm">
+                                <label for="privacidad" class="font-bold text-azul">Acepto la Política de Protección de Datos *</label>
+                                <p class="text-gray-600 mt-1 leading-tight text-xs">
+                                    Responsable: Barbarians Marina Alta / Denia Rugby Club. Finalidad: Gestión de la ficha federativa y contacto. 
+                                    Sus documentos se cifran y guardan en servidor seguro. Puede ejercer sus derechos de acceso y rectificación en el email del club.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+<!--BOTÓN DE ENVIAR SOLICITUD-->                    
+                    <button type="submit" id="btnSubmit" class="w-full bg-azul text-white py-4 rounded-xl font-black text-xl hover:bg-black transition-all shadow-lg hover:-translate-y-1">
+                        ENVIAR INSCRIPCIÓN
+                    </button>
+                    <p id="msg" class="text-center font-bold mt-4"></p>
+                </form>
+                <div id="resumenInscripcion" class="hidden space-y-6 animate-fade-in">
+    <div class="text-center">
+        <div class="inline-flex items-center justify-center w-20 h-20 bg-green-100 text-green-600 rounded-full mb-4">
+            <i class="fas fa-check-double text-3xl"></i>
+        </div>
+        <h3 class="text-3xl font-black text-azul uppercase italic">¡Inscripción Recibida!</h3>
+        <p class="text-gray-600 mt-2">Estos son los datos que hemos registrado en el club:</p>
+    </div>
+<!-- MENSAJE RESUMEN DEL CONTENIDO DE LA INSCRIPCIÓN-->
+    <div class="bg-gray-50 rounded-2xl p-6 border-2 border-dashed border-azul/20 grid md:grid-cols-2 gap-4 text-sm">
+        <div class="p-3 bg-white rounded-lg shadow-sm">
+            <span class="block text-gray-400 uppercase text-xs font-bold">Jugador/a</span>
+            <span id="res-nombre" class="text-azul font-black text-lg">-</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg shadow-sm">
+            <span class="block text-gray-400 uppercase text-xs font-bold">Fecha de Nacimiento</span>
+            <span id="res-fecha" class="text-azul font-bold">-</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg shadow-sm">
+            <span class="block text-gray-400 uppercase text-xs font-bold">Email de contacto</span>
+            <span id="res-email" class="text-azul font-bold">-</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg shadow-sm">
+            <span class="block text-gray-400 uppercase text-xs font-bold">Teléfono</span>
+            <span id="res-tel" class="text-azul font-bold">-</span>
+        </div>
+        <div class="md:col-span-2 p-3 bg-white rounded-lg shadow-sm">
+            <span class="block text-gray-400 uppercase text-xs font-bold">Dirección</span>
+            <span id="res-dir" class="text-azul font-bold">-</span>
+        </div>
+        <div class="p-3 bg-white rounded-lg shadow-sm border-l-4 border-amarillo">
+            <span class="block text-gray-400 uppercase text-xs font-bold">Edad Actual</span>
+            <span id="res-edad" class="text-azul font-black text-lg">- años</span>
+        </div>
+        <div class="p-3 bg-azul text-white rounded-lg shadow-sm">
+            <span class="block text-gray-200 uppercase text-xs font-bold">Categoría Barbarians</span>
+            <span id="res-categoria" class="text-amarillo font-black text-lg italic uppercase">-</span>
+        </div>
+        <div class="p-3 bg-amarillo text-azul rounded-lg shadow-sm border-2 border-azul/10">
+            <span class="block text-azul/60 uppercase text-xs font-bold">Importe Inscripción</span>
+            <span id="res-precio" class="text-azul font-black text-2xl">0,00 €</span>
+        </div>
+        <!--DATOS DEL PAGO-->
+        <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-100 mt-8">
+                    <h4 class="text-azul font-black text-center mb-4 italic uppercase flex items-center justify-center">
+                        <i class="fas fa-university mr-2"></i> Datos para el Pago:
+                    </h4>
+                    <div class="space-y-4 max-w-md mx-auto">
+                        <div class="flex flex-col items-center p-3 bg-white rounded-xl shadow-sm border border-blue-200">
+                            <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest">IBAN</span>
+                            <span class="text-azul font-black text-lg tracking-wider">ES38 3159 0080 6230 6904 2020</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-white rounded-xl shadow-sm border border-blue-200">
+                            <span class="text-[10px] uppercase font-bold text-gray-400 tracking-widest">Beneficiario</span>
+                            <span class="text-azul font-bold">DENIA RUGBY CLUB</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-blue-600 rounded-xl shadow-sm text-white">
+                            <span class="text-[10px] uppercase font-bold text-blue-200 tracking-widest">Concepto Obligatorio</span>
+                            <span class="font-bold italic text-center">CATEGORÍA + NOMBRE JUGADOR</span>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-500 text-[10px] mt-4 leading-tight">* Por favor, envía el justificante al email del club.</p>
+                </div>
+        <div class="flex justify-center mt-8">
+            <button onclick="window.location.reload()" class="bg-azul text-white px-8 py-3 rounded-xl font-bold hover:bg-amarillo hover:text-azul transition uppercase">
+                Realizar otra inscripción
+            </button>
+        </div>
+</div>
+            </div>
+        </div>
+    </section>
+<!--APARTADO DE LA TIENDA DEL CLUB-->
+<section id="tienda" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-black text-azul mb-10 italic text-center uppercase">
+            <span class="border-b-4 border-amarillo pb-2">MERCHANDISING</span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="group border-2 border-gray-100 rounded-3xl p-6 hover:border-amarillo transition shadow-sm hover:shadow-xl product-card flex flex-col justify-between">
+                <div>
+                    <div class="h-64 bg-gray-100 rounded-2xl mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80" alt="Titular" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="font-black text-xl text-azul uppercase italic prod-nombre">Camiseta Titular</h3>
+                    <p class="text-gray-600 mb-4 font-bold text-2xl prod-precio" data-valor="45">45,00 €</p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <select class="prod-talla p-3 bg-gray-50 border rounded-xl outline-none font-bold text-sm">
+                        <option value="S">Talla S</option>
+                        <option value="M">Talla M</option>
+                        <option value="L">Talla L</option>
+                        <option value="XL">Talla XL</option>
+                    </select>
+                    <input type="number" min="0" value="0" class="prod-cantidad p-3 bg-gray-50 border rounded-xl text-center font-black text-azul outline-none" placeholder="0">
+                </div>
+            </div>
+
+            <div class="group border-2 border-gray-100 rounded-3xl p-6 hover:border-amarillo transition shadow-sm hover:shadow-xl product-card flex flex-col justify-between">
+                <div>
+                    <div class="h-64 bg-gray-100 rounded-2xl mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519326844852-704caea5679e?auto=format&fit=crop&q=80" alt="Visitante" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="font-black text-xl text-azul uppercase italic prod-nombre">Camiseta Visitante</h3>
+                    <p class="text-gray-600 mb-4 font-bold text-2xl prod-precio" data-valor="45">45,00 €</p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <select class="prod-talla p-3 bg-gray-50 border rounded-xl outline-none font-bold text-sm">
+                        <option value="S">Talla S</option>
+                        <option value="M">Talla M</option>
+                        <option value="L">Talla L</option>
+                        <option value="XL">Talla XL</option>
+                    </select>
+                    <input type="number" min="0" value="0" class="prod-cantidad p-3 bg-gray-50 border rounded-xl text-center font-black text-azul outline-none" placeholder="0">
+                </div>
+            </div>
+
+            <div class="group border-2 border-gray-100 rounded-3xl p-6 hover:border-amarillo transition shadow-sm hover:shadow-xl product-card flex flex-col justify-between">
+                <div>
+                    <div class="h-64 bg-gray-200 rounded-2xl mb-6 flex items-center justify-center">
+                        <i class="fas fa-tshirt text-4xl text-gray-300"></i>
+                    </div>
+                    <h3 class="font-black text-xl text-azul uppercase italic prod-nombre">Sudadera Club</h3>
+                    <p class="text-gray-600 mb-4 font-bold text-2xl prod-precio" data-valor="35">35,00 €</p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <select class="prod-talla p-3 bg-gray-50 border rounded-xl outline-none font-bold text-sm">
+                        <option value="S">Talla S</option>
+                        <option value="M">Talla M</option>
+                        <option value="L">Talla L</option>
+                    </select>
+                    <input type="number" min="0" value="0" class="prod-cantidad p-3 bg-gray-50 border rounded-xl text-center font-black text-azul outline-none" placeholder="0">
+                </div>
+            </div>
+
+        </div> <div id="area-pedido-tienda" class="mt-16 max-w-xl mx-auto bg-gray-50 p-8 rounded-3xl border-2 border-dashed border-azul/20">
+            <h3 class="text-2xl font-black text-azul text-center mb-6 italic uppercase">Tu Pedido</h3>
+            
+            <div id="resumenCompra" class="bg-white p-5 rounded-2xl mb-6 shadow-inner space-y-3">
+                <p class="text-gray-400 italic text-center">Selecciona productos y cantidades arriba...</p>
+            </div>
+
+            <div class="flex justify-between items-center mb-8 px-2">
+                <span class="text-gray-500 uppercase font-black tracking-widest text-sm">Total a pagar:</span>
+                <span id="totalVenta" class="text-4xl font-black text-azul">0,00 €</span>
+            </div>
+
+            <div class="space-y-4 mb-8">
+                <div>
+                    <label class="block text-azul font-bold mb-1 text-sm ml-2">Nombre Completo</label>
+                    <input type="text" id="nombreCliente" placeholder="Ej: Juan Pérez" class="w-full p-4 rounded-2xl border-none shadow-sm focus:ring-2 focus:ring-amarillo outline-none">
+                </div>
+                <div>
+                    <label class="block text-azul font-bold mb-1 text-sm ml-2">Teléfono de contacto</label>
+                    <input type="tel" id="telCliente" placeholder="Ej: 600 000 000" class="w-full p-4 rounded-2xl border-none shadow-sm focus:ring-2 focus:ring-amarillo outline-none">
+                </div>
+            </div>
+
+            <button onclick="enviarPedidoTienda()" class="w-full bg-azul text-white py-5 rounded-2xl font-black text-xl hover:bg-black transition-all shadow-xl hover:-translate-y-1 active:scale-95">
+                CONFIRMAR PEDIDO
+            </button>
+        </div>
+
+    </div>
+</section>
+    
+<!-- APARTADO DE CONTACTO CON EL CLUB-->
+    <footer id="contacto" class="bg-black text-white py-12">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 items-start">
+        <div class="text-center md:text-left">
+            <h4 class="text-amarillo font-black text-xl mb-6 italic uppercase">Contacto</h4>
+            <div class="space-y-3 text-gray-400 font-medium">
+                <p>
+                    <a href="https://maps.google.com/?cid=12214911756283329945&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" class="hover:text-amarillo transition duration-300">
+                        <i class="fas fa-map-marker-alt text-amarillo mr-2"></i>CAMPO: Cami del Regatxo, 6, Denia
+                    </a>
+                </p>
+                <p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Calle+Xabia+7+Denia" target="_blank" class="hover:text-amarillo transition duration-300">
+                        <i class="fas fa-map-marker-alt text-amarillo mr-2"></i>SEDE SOCIAL: C / Xabia, 7, Denia
+                    </a>
+                </p>
+                <p>
+                    <a href="tel:+34611654014" class="hover:text-amarillo transition duration-300">
+                        <i class="fas fa-phone text-amarillo mr-2"></i> +34 611 654 014
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:deniarugbyclub1991@gmail.com" class="hover:text-amarillo transition duration-300">
+                        <i class="fas fa-envelope text-amarillo mr-2"></i> deniarugbyclub1991@gmail.com
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h4 class="text-amarillo font-black text-xl mb-6 italic uppercase">Síguenos</h4>
+            <div class="flex justify-center space-x-8 text-4xl">
+                <a href="https://www.facebook.com/barbariansmarinaalta" class="hover:text-amarillo transition"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/barbariansmarinaalta/" class="hover:text-amarillo transition"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="w-full">
+            <div class="rounded-xl overflow-hidden h-64 md:h-80 border-4 border-amarillo shadow-2xl">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.882196652494!2d0.0913012!3d38.8449821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129e02ca00dc17e3%3A0xa98415866402bd99!2sPolideportivo%20Municipal%20de%20Denia!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-12 pt-8 border-t border-gray-800 text-gray-500 text-xs italic">
+        © 2026 BARBARIANS MARINA ALTA - DENIA RUGBY CLUB
+    </div>
+</footer>
+
+    <script>
+        document.getElementById('rugbyForm').onsubmit = async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('btnSubmit');
+            const msg = document.getElementById('msg');
+            //URL APPSCRIPT DRIVE
+            //const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbxgpM0utRLy80EyfTLFkm6V3nVObl_VpnE2KOmfJ5S77WFXJ6nEHeUhiBaOHtgcuXLo/exec"; original
+            const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbxnTt0ydogT7YbZzWMxRO83lRj5nDZJTCzIb8LmgZTUDu0M0uQfEdh7FFVfZjTbzL5t/exec";
+
+            // Validación de archivos obligatorios
+            if (document.getElementById('inputFoto').files.length === 0 || 
+                document.getElementById('inputDocumentoJugador').files.length === 0) {
+                alert("¡Faltan documentos! La foto y el DNI del jugador son obligatorios.");
+                return;
+            }
+
+            btn.innerText = "PROCESANDO ENVÍO...";
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+
+            const formData = new FormData(e.target);
+            const datosEnvio = Object.fromEntries(formData.entries());
+            datosEnvio.archivos = [];
+
+            const fileInputs = document.querySelectorAll('input[type="file"]');
+            const promesas = [];
+
+            fileInputs.forEach(input => {
+                if (input.files.length > 0) {
+                    const file = input.files[0];
+                    const promesa = new Promise((resolve) => {
+                        const reader = new FileReader();
+                        reader.onload = (event) => {
+                            datosEnvio.archivos.push({
+                                nombre: input.name + "_" + file.name,
+                                tipo: file.type,
+                                base64: event.target.result
+                            });
+                            resolve();
+                        };
+                        reader.readAsDataURL(file);
+                    });
+                    promesas.push(promesa);
+                }
+            });
+
+            await Promise.all(promesas);
+
+            try {
+                await fetch(URL_SCRIPT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: JSON.stringify(datosEnvio)
+                });
+
+            //COMPROBACIÓN DE EDAD PARA EL CÁLCULO DE SU CATEGORÍA
+            const fechaNacimiento = new Date(formData.get('fechaNacimiento'));
+            const añoNacimiento = fechaNacimiento.getFullYear();
+            const añoActual = new Date().getFullYear();
+            const edadPura = añoActual - añoNacimiento; // Edad que cumple este año
+
+            let categoria = "";
+            let precio = "";
+
+            if (edadPura < 6) {categoria = "Sub-6"; precio = "110,00€";}
+            else if (edadPura < 8)  {categoria = "Sub-8"; precio = "110,00€";}
+            else if (edadPura < 10) {categoria = "Sub-10"; precio = "110,00€";}
+            else if (edadPura < 12) {categoria = "Sub-12"; precio = "110,00€";}
+            else if (edadPura < 14) {categoria = "Sub-14"; precio = "110,00€";}
+            else if (edadPura < 16) {categoria = "Sub-16"; precio = "110,00€";}
+            else if (edadPura < 18) {categoria = "Sub-18"; precio = "280,00€"}
+            else {categoria = "Senior"; precio = "480,00€"}
+
+            //OCULTAR EL FORMULARIO
+            document.getElementById('rugbyForm').classList.add('hidden');
+
+            //RELLENAR LOS DATOS EN EL RESUMEN (USAMOS LOS DATOS DE FORMDATA)
+            document.getElementById('res-nombre').innerText = `${formData.get('nombre')} ${formData.get('apellido1')} ${formData.get('apellido2')}`;
+            document.getElementById('res-fecha').innerText = formData.get('fechaNacimiento');
+            document.getElementById('res-email').innerText = formData.get('email');
+            document.getElementById('res-tel').innerText = formData.get('telefono');
+            document.getElementById('res-dir').innerText = formData.get('direccion');
+
+            //RELLENAMOS LOS DATOS CALCULADOS
+            document.getElementById('res-edad').innerText = edadPura + " años";
+            document.getElementById('res-categoria').innerText = categoria;
+            document.getElementById('res-precio').innerText = precio;
+            
+            //MOSTRAMOS EL RESUMEN DEL JUGADOR
+            document.getElementById('rugbyForm').classList.add('hidden');
+            const resumen = document.getElementById('resumenInscripcion');
+            resumen.classList.remove('hidden');
+            
+            //HACER SCROLL HASTA EL TÍTULO MOSTRANDO EL ÉXITO
+            resumen.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+        
+        } catch (error) {
+                console.error(error);
+                msg.innerText = "Error en el envío. Contacta con el club.";
+                btn.disabled = false;
+                btn.innerText = "REINTENTAR";
+            }
+        };
+
+        function configurarDragAndDrop(idZona, idInput) {
+            const dropZone = document.getElementById(idZona);
+            const input = document.getElementById(idInput);
+            dropZone.onclick = () => input.click();
+            dropZone.ondragover = (e) => { e.preventDefault(); dropZone.classList.add('drop-zone--over'); };
+            dropZone.ondragleave = () => dropZone.classList.remove('drop-zone--over');
+            dropZone.ondrop = (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('drop-zone--over');
+                if (e.dataTransfer.files.length > 0) {
+                    input.files = e.dataTransfer.files;
+                    dropZone.querySelector('span').innerText = e.dataTransfer.files[0].name;
+                }
+            };
+            input.onchange = () => { if (input.files.length > 0) dropZone.querySelector('span').innerText = input.files[0].name; };
+        }
+
+        configurarDragAndDrop('dropZoneFoto', 'inputFoto');
+        configurarDragAndDrop('dropZoneJugador', 'inputDocumentoJugador');
+        configurarDragAndDrop('dropZonePaterno', 'inputDocumentoPaterno');
+
+            //CÓDIGO DE LA TIENDA
+        // 1. CONFIGURACIÓN: Pega aquí la URL que te dio Google Apps Script
+        const URL_TIENDA_GOOGLE = "https://script.google.com/macros/s/AKfycbxfs0cMNZ1lr_5heRG-EkilMPrVThgnp0rI3Qw44yYw7P0eqgl4F_b_6ov4CnZIL4DG/exec";
+
+        // 2. ACTUALIZACIÓN AUTOMÁTICA DEL TOTAL
+        document.addEventListener('input', function(e) {
+            // Si el usuario cambia una cantidad, recalculamos
+            if (e.target.classList.contains('prod-cantidad')) {
+                actualizarCarrito();
+            }
+        });
+
+        function actualizarCarrito() {
+            const productos = document.querySelectorAll('.product-card');
+            const resumenDiv = document.getElementById('resumenCompra');
+            const totalSpan = document.getElementById('totalVenta');
+            
+            let htmlResumen = "";
+            let totalAcumulado = 0;
+
+            productos.forEach(card => {
+                const nombre = card.querySelector('.prod-nombre').innerText;
+                const precio = parseFloat(card.querySelector('.prod-precio').dataset.valor);
+                const cantidad = parseInt(card.querySelector('.prod-cantidad').value) || 0;
+                const talla = card.querySelector('.prod-talla').value;
+
+                if (cantidad > 0) {
+                    const subtotal = precio * cantidad;
+                    totalAcumulado += subtotal;
+                    
+                    // Añadimos línea al resumen visual
+                    htmlResumen += `
+                        <div class="flex justify-between items-center border-b border-gray-100 py-1 text-sm">
+                            <span><span class="font-bold text-azul">${cantidad}x</span> ${nombre} (${talla})</span>
+                            <span class="font-bold text-azul">${subtotal.toFixed(2)}€</span>
+                        </div>`;
+                }
+            });
+
+            // Si está vacío, ponemos el mensaje de ayuda
+            resumenDiv.innerHTML = htmlResumen || '<p class="text-gray-400 italic text-center py-2">Selecciona productos arriba</p>';
+            totalSpan.innerText = totalAcumulado.toFixed(2) + " €";
+        }
+
+        // 3. ENVÍO DE DATOS A GOOGLE SHEETS
+        async function enviarPedidoTienda() {
+            const nombre = document.getElementById('nombreCliente').value;
+            const telefono = document.getElementById('telCliente').value;
+            const total = document.getElementById('totalVenta').innerText;
+            
+            // Creamos la lista de productos para el Excel
+            const lineasPedido = [];
+            document.querySelectorAll('.product-card').forEach(card => {
+                const cant = parseInt(card.querySelector('.prod-cantidad').value) || 0;
+                if (cant > 0) {
+                    const nom = card.querySelector('.prod-nombre').innerText;
+                    const tal = card.querySelector('.prod-talla').value;
+                    lineasPedido.push(`${cant}x ${nom} (${tal})`);
+                }
+            });
+
+            // Validaciones básicas
+            if (!nombre || !telefono) {
+                alert("⚠️ Por favor, introduce tu nombre y teléfono.");
+                return;
+            }
+            if (lineasPedido.length === 0) {
+                alert("⚠️ No has seleccionado ningún producto.");
+                return;
+            }
+
+            // Objeto con los datos exactos para las columnas del Excel
+            const datosFinales = {
+                fecha: new Date().toLocaleString(),
+                cliente: nombre,
+                telefono: telefono,
+                pedido: lineasPedido.join(" | "),
+                total: total
+            };
+
+            // Bloqueamos el botón para evitar múltiples envíos
+            const btn = event.target;
+            btn.disabled = true;
+            btn.innerText = "ENVIANDO...";
+
+            try {
+                await fetch(URL_TIENDA_GOOGLE, {
+                    method: 'POST',
+                    mode: 'no-cors', // Para evitar errores de dominios diferentes
+                    cache: 'no-cache',
+                    body: JSON.stringify(datosFinales)
+                });
+
+                // Éxito
+                alert("¡Pedido enviado correctamente! Nos pondremos en contacto contigo.");
+                location.reload(); // Limpiamos todo
+
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Hubo un problema al enviar. Inténtalo de nuevo.");
+                btn.disabled = false;
+                btn.innerText = "RESERVAR Y PAGAR";
+            }
+        }
+    </script>
+</body>
+</html>
